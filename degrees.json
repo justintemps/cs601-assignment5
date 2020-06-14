@@ -1,0 +1,16 @@
+[
+  {
+    "school": "University of Texas at Austin",
+    "major": "History",
+    "concentration": "Italian Language and Civilization",
+    "type": "B.A.",
+    "year": 2003
+  },
+  {
+    "school": "Boston University",
+    "major": "Computer Information Systems",
+    "concentration": "Web Development",
+    "type": "M.S.",
+    "year": 2021
+  }
+]
