@@ -20,6 +20,7 @@ function getURL(url, callback) {
   req.addEventListener("error", function () {
     callback(null, new Error("Network error"));
   });
+  // Tbh, I've never understood why you have to pass null to req.send()
   req.send(null);
 }
 
@@ -66,7 +67,16 @@ function renderRows(tbody, fields, data = []) {
 function renderContent(data = []) {
   // Parse the data into a JS object
   const parsedData = JSON.parse(data);
+
+  // The mounting point for our app
   const content = document.getElementById("content");
+
+  // Don't keep rendering the table over and over
+  if (content.childNodes.length !== 0) {
+    return;
+  }
+
+  // Instantiate the containers for our table
   const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
@@ -74,7 +84,7 @@ function renderContent(data = []) {
   // Get a unique list of fields for all the data
   const fields = getFields(parsedData);
 
-  // Render the columns with headings
+  // Render the columns with a headingsfor each field
   renderCols(thead, fields);
 
   // Render the data in the table body
