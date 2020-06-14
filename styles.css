@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 2px solid royalblue;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+  padding: 10px;
+  background-color: royalblue;
+  cursor: pointer;
+  color: #fff;
+  margin: 50px 0;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+th {
+  font-weight: 500;
+  text-align: left;
+  text-transform: capitalize;
+  background-color: royalblue;
+  color: #fff;
+}
+
+td {
+  font-weight: 400;
+  text-align: left;
+}
+
+h1 {
+  font-family: "MuseoModerno", cursive;
+  margin: 25px 0 0;
+}
